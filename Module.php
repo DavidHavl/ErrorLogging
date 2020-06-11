@@ -192,7 +192,7 @@ class Module implements
 
         // 404 route not found exception
         if ($message == Application::ERROR_ROUTER_NO_MATCH) {
-            if (empty($this->config['dherrorlogging']['error_types']['dispatch\router_no_match'])) {
+            if (empty($this->getConfig()['dherrorlogging']['error_types']['dispatch\router_no_match'])) {
                 return;
             }
             $type = '404';
